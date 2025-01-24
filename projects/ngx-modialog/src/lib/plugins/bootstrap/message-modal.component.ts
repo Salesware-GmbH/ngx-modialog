@@ -17,16 +17,17 @@ export interface BSMessageModalButtonConfig {
 }
 
 @Component({
-  selector: 'modal-title',
-  encapsulation: ViewEncapsulation.None,
-  template: `<div [ngClass]="context.headerClass" [ngSwitch]="titleHtml">
+    selector: 'modal-title',
+    encapsulation: ViewEncapsulation.None,
+    template: `<div [ngClass]="context.headerClass" [ngSwitch]="titleHtml">
       <button *ngIf="context.showClose" type="button" class="close"
               aria-label="Close" (click)="dialog.dismiss()">
           <span aria-hidden="true">×</span>
       </button>
       <div *ngSwitchCase="1" [innerHtml]="context.titleHtml"></div>
       <h3 *ngSwitchDefault class="modal-title">{{context.title}}</h3>
- </div>`
+ </div>`,
+    standalone: false
 })
 export class BSMessageModalTitle {
   public context: MessageModalPreset;
@@ -41,13 +42,13 @@ export class BSMessageModalTitle {
 }
 
 @Component({
-  // tslint:disable-next-line:component-selector
-  selector: 'modal-body',
-  encapsulation: ViewEncapsulation.None,
-  styles: [`.form-group {
+    // tslint:disable-next-line:component-selector
+    selector: 'modal-body',
+    encapsulation: ViewEncapsulation.None,
+    styles: [`.form-group {
     margin-top: 10px;
   }`],
-  template: `<div [ngClass]="context.bodyClass">
+    template: `<div [ngClass]="context.bodyClass">
     <div [innerHtml]="context.message"></div>
       <div *ngIf="context.showInput" class="form-group">
         <input autofocus #input
@@ -59,7 +60,8 @@ export class BSMessageModalTitle {
             placeholder="{{context.placeholder}}">
       </div>
     </div>
-`
+`,
+    standalone: false
 })
 // tslint:disable-next-line:component-class-suffix
 export class BSMessageModalBody {
@@ -81,14 +83,15 @@ export class BSMessageModalBody {
  * Represents the modal footer for storing buttons.
  */
 @Component({
-  // tslint:disable-next-line:component-selector
-  selector: 'modal-footer',
-  encapsulation: ViewEncapsulation.None,
-  template: `<div [ngClass]="dialog.context.footerClass">
+    // tslint:disable-next-line:component-selector
+    selector: 'modal-footer',
+    encapsulation: ViewEncapsulation.None,
+    template: `<div [ngClass]="dialog.context.footerClass">
     <button *ngFor="let btn of dialog.context.buttons;"
             [ngClass]="btn.cssClass"
             (click)="onClick(btn, $event)">{{btn.caption}}</button>
-</div>`
+</div>`,
+    standalone: false
 })
 // tslint:disable-next-line:component-class-suffix
 export class BSModalFooter {
@@ -120,10 +123,11 @@ export class BSModalFooter {
  *      - Set button configuration (from 0 to n)
  */
 @Component({
-  // tslint:disable-next-line:component-selector
-  selector: 'modal-content',
-  encapsulation: ViewEncapsulation.None,
-  template: `<modal-title></modal-title><modal-body></modal-body><modal-footer></modal-footer>`
+    // tslint:disable-next-line:component-selector
+    selector: 'modal-content',
+    encapsulation: ViewEncapsulation.None,
+    template: `<modal-title></modal-title><modal-body></modal-body><modal-footer></modal-footer>`,
+    standalone: false
 })
 // tslint:disable-next-line:component-class-suffix
 export class BSMessageModal implements ModalComponent<MessageModalPreset> {

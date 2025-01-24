@@ -31,10 +31,11 @@ export interface EmbedComponentConfig {
  * Represents the modal overlay.
  */
 @Component({
-  // tslint:disable-next-line:component-selector
-  selector: 'modal-overlay',
-  encapsulation: ViewEncapsulation.None,
-  templateUrl: './overlay.component.html'
+    // tslint:disable-next-line:component-selector
+    selector: 'modal-overlay',
+    encapsulation: ViewEncapsulation.None,
+    templateUrl: './overlay.component.html',
+    standalone: false
 })
 // tslint:disable-next-line:component-class-suffix
 export class ModalOverlay extends BaseDynamicComponent {

@@ -4,13 +4,13 @@
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
     "sourceMap": true,
+    "esModuleInterop": true,
     "paths": {
       "ngx-modialog": [
         "dist/ngx-modialog"
       ]
     },
     "declaration": false,
-    "downlevelIteration": true,
     "experimentalDecorators": true,
     "moduleResolution": "node",
     "target": "ES2022",

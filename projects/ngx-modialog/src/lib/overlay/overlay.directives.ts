@@ -16,8 +16,9 @@ import { Overlay } from './overlay.service';
  * (if non blocking)
  */
 @Directive({
-  // tslint:disable-next-line:directive-selector
-  selector: '[overlayDialogBoundary]'
+    // tslint:disable-next-line:directive-selector
+    selector: '[overlayDialogBoundary]',
+    standalone: false
 })
 // tslint:disable-next-line:directive-class-suffix
 export class OverlayDialogBoundary {
@@ -30,8 +31,9 @@ export class OverlayDialogBoundary {
 }
 
 @Directive({
-  // tslint:disable-next-line:directive-selector
-  selector: '[overlayTarget]'
+    // tslint:disable-next-line:directive-selector
+    selector: '[overlayTarget]',
+    standalone: false
 })
 // tslint:disable-next-line:directive-class-suffix
 export class OverlayTarget implements OnDestroy {

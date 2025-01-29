@@ -11,14 +11,15 @@ import { BaseDynamicComponent } from './base-dynamic-component';
  * Represents the modal backdrop shaped by CSS.
  */
 @Component({
-  // tslint:disable-next-line:component-selector
-  selector: 'css-backdrop',
-  host: {
-    '[attr.class]': 'cssClass',
-    '[attr.style]': 'styleStr'
-  },
-  encapsulation: ViewEncapsulation.None,
-  template: ``
+    // tslint:disable-next-line:component-selector
+    selector: 'css-backdrop',
+    host: {
+        '[attr.class]': 'cssClass',
+        '[attr.style]': 'styleStr'
+    },
+    encapsulation: ViewEncapsulation.None,
+    template: ``,
+    standalone: false
 })
 // tslint:disable-next-line:component-class-suffix
 export class CSSBackdrop extends BaseDynamicComponent {

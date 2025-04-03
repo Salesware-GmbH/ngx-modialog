@@ -3,8 +3,8 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build"
+    "build": "ng build",
+    "publish": "npm publish --access=public dist/ngx-modialog/"
   },
   "dependencies": {
     "@angular/animations": "^19.1.3",

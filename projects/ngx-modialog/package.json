@@ -1,13 +1,12 @@
 {
-  "name": "@4sellers/ngx-modialog",
+  "name": "@salesware/ngx-modialog",
   "version": "19.0.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/4sellers/ngx-modialog.git"
+    "url": "https://github.com/Salesware-GmbH/ngx-modialog"
   },
-  "author": "4Sellers",
+  "author": "Salesware",
   "license": "MIT",
-  "homepage": "https://github.com/4sellers/ngx-modialog",
   "dependencies": {
     "tslib": "^2.3.0"
   },

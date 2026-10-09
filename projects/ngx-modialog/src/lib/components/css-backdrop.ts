@@ -2,7 +2,8 @@ import {
   Component,
   ElementRef,
   ViewEncapsulation,
-  Renderer2
+  Renderer2,
+  ChangeDetectionStrategy
 } from '@angular/core';
 
 import { BaseDynamicComponent } from './base-dynamic-component';
@@ -19,6 +20,7 @@ import { BaseDynamicComponent } from './base-dynamic-component';
     },
     encapsulation: ViewEncapsulation.None,
     template: ``,
+    changeDetection: ChangeDetectionStrategy.Eager,
     standalone: false
 })
 // tslint:disable-next-line:component-class-suffix

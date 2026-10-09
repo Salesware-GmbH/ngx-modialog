@@ -2,7 +2,8 @@ import {
   Component,
   ViewEncapsulation,
   ElementRef,
-  Renderer2
+  Renderer2,
+  ChangeDetectionStrategy
 } from '@angular/core';
 
 import { BaseDynamicComponent } from './base-dynamic-component';
@@ -21,6 +22,7 @@ import { DialogRef } from '../models/dialog-ref';
     encapsulation: ViewEncapsulation.None,
     template: `
     <ng-content></ng-content>`,
+    changeDetection: ChangeDetectionStrategy.Eager,
     standalone: false
 })
 // tslint:disable-next-line:component-class-suffix

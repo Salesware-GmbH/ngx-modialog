@@ -1,4 +1,4 @@
-import { Component, ViewEncapsulation } from '@angular/core';
+import { Component, ViewEncapsulation, ChangeDetectionStrategy } from '@angular/core';
 import { MessageModalPreset } from './presets/message-modal-preset';
 import { ModalComponent } from '../../models/tokens';
 import { DialogRef } from '../../models/dialog-ref';
@@ -33,6 +33,7 @@ export interface BSMessageModalButtonConfig {
         <h3 class="modal-title">{{context.title}}</h3>
       }
  </div>`,
+    changeDetection: ChangeDetectionStrategy.Eager,
     standalone: false
 })
 export class BSMessageModalTitle {
@@ -69,6 +70,7 @@ export class BSMessageModalTitle {
         }
       </div>
     `,
+    changeDetection: ChangeDetectionStrategy.Eager,
     standalone: false
 })
 // tslint:disable-next-line:component-class-suffix
@@ -101,6 +103,7 @@ export class BSMessageModalBody {
         (click)="onClick(btn, $event)">{{btn.caption}}</button>
       }
     </div>`,
+    changeDetection: ChangeDetectionStrategy.Eager,
     standalone: false
 })
 // tslint:disable-next-line:component-class-suffix
@@ -137,6 +140,7 @@ export class BSModalFooter {
     selector: 'modal-content',
     encapsulation: ViewEncapsulation.None,
     template: `<modal-title></modal-title><modal-body></modal-body><modal-footer></modal-footer>`,
+    changeDetection: ChangeDetectionStrategy.Eager,
     standalone: false
 })
 // tslint:disable-next-line:component-class-suffix

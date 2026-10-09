@@ -10,7 +10,8 @@ import {
   ViewContainerRef,
   ViewEncapsulation,
   Renderer2,
-  TemplateRef, HostListener
+  TemplateRef, HostListener,
+  ChangeDetectionStrategy
 } from '@angular/core';
 
 import { PromiseCompleter, supportsKey } from '../framework/utils';
@@ -35,6 +36,7 @@ export interface EmbedComponentConfig {
     selector: 'modal-overlay',
     encapsulation: ViewEncapsulation.None,
     templateUrl: './overlay.component.html',
+    changeDetection: ChangeDetectionStrategy.Eager,
     standalone: false
 })
 // tslint:disable-next-line:component-class-suffix

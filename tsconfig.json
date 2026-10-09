@@ -1,15 +1,16 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "baseUrl": "./",
     "outDir": "./dist/out-tsc",
+    "rootDir": "./projects/ngx-modialog/src",
     "sourceMap": true,
     "esModuleInterop": true,
     "paths": {
       "ngx-modialog": [
-        "dist/ngx-modialog"
+        "./dist/ngx-modialog"
       ]
     },
+    "strict": false,
     "declaration": false,
     "experimentalDecorators": true,
     "moduleResolution": "bundler",
